@@ -1,0 +1,21 @@
+.block-modal
+  &__btn
+    background: $violet
+    color: $white
+    border: none
+    border-radius: 20px 20px 0 0
+    top: 0
+    bottom: 0
+    margin: auto
+    position: fixed
+    width: 530px
+    height: 40px
+    font-size: $fz30
+    line-height: 40px
+    right: calc(530px / -2 + 20px)
+    transform: rotate(-90deg)
+    padding: 0
+    @media all and (min-width: 320px)
+      display: none
+    @media all and (min-width: 600px)
+      display: block

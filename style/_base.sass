@@ -1,0 +1,99 @@
+$fz20: 1.25rem
+$fz24: 1.5rem
+$fz26: 1.625rem
+$fz30: 1.875rem
+$fz35: 2.187rem
+$fz40: 2.5rem
+$fz75: 4.687rem
+
+$yallow: #FBFF30
+$black: #000
+$violet: #572A6B
+$white: #fff
+
+$max-width-container: 1920px
+$max-width-content: 1200px
+
+@mixin container
+  width: 100%
+  max-width: $max-width-container!important
+  margin: auto
+@mixin content
+  width: 100%
+  max-width: $max-width-content!important
+  margin: auto
+
+html,body
+  font-size: 16px
+  font-family: "Exo 2",sans-serif
+  font-weight: 300
+
+  //media
+  @media all and (min-width: 320px)
+  @media all and (min-width: 600px)
+  @media all and (min-width: 1300px)
+
+.wrapper
+  position: relative
+
+h1,.h1
+  font-weight: 700
+  @media all and (min-width: 320px)
+    font-size: $fz40
+    line-height: $fz40
+  @media all and (min-width: 600px)
+    font-size: $fz75
+    line-height: $fz75
+
+h2,.h2
+  @media all and (min-width: 320px)
+    font-size: $fz24
+    line-height: 36px
+  @media all and (min-width: 600px)
+    font-size: $fz35
+    line-height: 42px
+p
+  @media all and (min-width: 320px)
+    font-size: $fz20
+    line-height: 30px
+  @media all and (min-width: 600px)
+    font-size: $fz26
+    line-height: 39px
+  @media all and (min-width: 1300px)
+    font-size: $fz30
+    line-height: 45px
+
+a
+  text-decoration: none
+  transition: opacity 0.25s linear
+  &:hover
+    color: $white
+    opacity: 0.7
+header,.container,footer,.container-fluid
+  @media all and (min-width: 320px)
+    padding-left: 0
+    padding-right: 0
+    @include container
+  @media all and (min-width: 600px)
+  @media all and (min-width: 1300px)
+
+footer > .wrapper,
+.content > .wrapper,
+header .navbar,
+.banner > .wrapper,
+.similar-articles > .wrapper
+  @media all and (min-width: 320px)
+    width: 100%
+    max-width: 1100px
+    margin: auto
+    padding-left: 15px
+    padding-right: 15px
+  @media all and (min-width: 600px)
+  @media all and (min-width: 996px)
+  @media all and (min-width: 1300px)
+    @include content
+    padding-left: 0
+    padding-right: 0
+.hide
+  visibility: hidden!important
+  opacity: 0!important
